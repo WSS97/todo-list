@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Todo list</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mantenha suas tarefas em ordem!</h1>
+    </header>
+    <section>
+      <input type="text" placeholder="Adcione a tarefa" id="inputTask" />
+      <button onclick="add()">Adcionar</button>
+    </section>
+    <main>
+      <div class="task">
+        <input
+          type="text"
+          value="Adcione a sua primeira tarefa acima"
+          disabled
+        />
+        <button onclick="edit()">Editar</button>
+        <button onclick="remove()">Excluir</button>
+        <button onclick="ok()">ok</button>
+      </div>
+    </main>
+
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
