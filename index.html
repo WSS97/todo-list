@@ -11,8 +11,12 @@
       <h1>Mantenha suas tarefas em ordem!</h1>
     </header>
     <section>
-      <input type="text" placeholder="Adcione a tarefa" id="inputTask" />
-      <button onclick="add()">Adcionar</button>
+      <input
+        type="text"
+        placeholder="Adcione nome, descricao ou titulo da tarefa"
+        id="inputTask"
+      />
+      <button id="add">Adcionar</button>
     </section>
     <main>
       <div class="task">
@@ -21,7 +25,7 @@
           value="Adcione a sua primeira tarefa acima"
           disabled
         />
-        <button onclick="edit()">Editar</button>
+        <button class="edit">Editar</button>
         <button onclick="remove()">Excluir</button>
         <button onclick="ok()">ok</button>
       </div>
