@@ -3,3 +3,7 @@
 input {
   width: 300px;
 }
+
+button.noView {
+  display: none;
+}
