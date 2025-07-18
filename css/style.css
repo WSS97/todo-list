@@ -6,29 +6,51 @@
   border-box: box-sizing;
 }
 
-body {
+html {
   background-image: linear-gradient(to right, #ae8ba1ff, #55464fff);
   background-repeat: no-repeat;
+  display: flex;
+}
+
+body {
   height: 100vh;
+  border-radius: 20px;
+  box-shadow: 3px 1px 10px 1px #5a4c55ff;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 150px;
+}
+
+div.content {
+  margin: 0 auto;
+  border: 0 1px;
 }
 
 header {
   text-align: center;
-  margin: 100px;
-  color: #faee80ff;
+  color: #f5f0c6ff;
 }
 
 div.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 120px;
 }
 
-div.demoTask input {
-  width: 300px;
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  margin-top: 20px;
+}
+
+main input {
+  width: 350px;
+  height: 2em;
   border: none;
-  background-color: #c0b8bdff;
-  height: 1.5em;
+  background-color: #f5d2e9ff;
+  margin-bottom: 3px;
 }
 
 input#inputTask {
@@ -38,15 +60,76 @@ input#inputTask {
   height: 2.5em;
   font-size: 1.1em;
   outline: none;
-  background-color: #fcebf6ff;
+  background-color: #f5d2e9ff;
   transition: background-color 0.5s ease;
 }
 
-input#inputTask:hover {
+button {
+  outline: none;
+  border: none;
+}
+
+button#add {
+  width: 2em;
+  height: 2.5em;
+  font-size: 1.1em;
+  transition: background-color 0.5s ease, margin 0.3s ease;
+}
+
+button#add:hover {
+  background-color: #78ca78ff;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+section:hover input#inputTask {
   background-color: #f2ecb6;
+  border-radius: 5px;
   border-bottom: 1px solid black;
+}
+
+section:hover button#add {
+  background-color: #78ca78ff;
+  height: 2.6em;
+  border-radius: 5px;
+  margin-left: 3px;
+}
+
+div.demoTask input {
+  background-color: #c0b8bdff;
 }
 
 button.noView {
   display: none;
+}
+
+i {
+  margin: 7px;
+}
+
+button.edit {
+  background-color: #eee45aff;
+}
+
+button.remove,
+.edit,
+.ok,
+.save {
+  margin-left: 4px;
+}
+
+button.remove {
+  background-color: #f17070ff;
+}
+
+button.ok {
+  background-color: #78ca78ff;
+}
+
+button.save {
+  background-color: #51c7ebff;
+  width: 6.5em;
+  border-radius: 5px;
 }

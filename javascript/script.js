@@ -53,34 +53,36 @@ window.onload = () => {
 
       inputTask.value = inTask.value;
       inputTask.setAttribute("disabled", true);
-      buttonEdit.textContent = "Editar";
-      buttonRemove.textContent = "Excluir";
-      buttonOk.textContent = "Ok";
-      buttonSave.textContent = "Salvar";
       buttonSave.classList.add("noView");
 
+      const iSave = document.createElement("i");
+      iSave.classList.add("fa-regular", "fa-floppy-disk");
+      buttonSave.classList.add("save");
+      buttonSave.appendChild(iSave);
+
+      const iOk = document.createElement("i");
+      iOk.classList.add("fa-solid", "fa-check");
+      buttonOk.classList.add("ok");
+      buttonOk.appendChild(iOk);
+
+      const iEdit = document.createElement("i");
+      iEdit.classList.add("fa-regular", "fa-pen-to-square");
+      buttonEdit.classList.add("edit");
+      buttonEdit.appendChild(iEdit);
+
+      const iRemove = document.createElement("i");
+      iRemove.classList.add("fa-solid", "fa-trash");
+      buttonRemove.classList.add("remove");
+      buttonRemove.appendChild(iRemove);
+
       divTask.appendChild(inputTask);
+
+      divTask.appendChild(buttonOk);
       divTask.appendChild(buttonEdit);
       divTask.appendChild(buttonRemove);
-      divTask.appendChild(buttonOk);
       divTask.appendChild(buttonSave);
 
       main.appendChild(divTask);
     }
   }
-  // passa por cada botao de edicao e adciona a funcao para editar o elemento da tarefa na lista
-  //   editButtons.forEach((btn) => {
-  //     btn.onclick = () => {
-  //       const tasks = btn.closest(".task");
-  //       const input = tasks.querySelector("input");
-  //       const length = input.value.length;
-
-  //       input.removeAttribute("disabled");
-  //       input.focus();
-  //       input.setSelectionRange(length, length);
-
-  //       btn.textContent = "Salvar";
-  //       btn.classList.remove("task");
-  //     };
-  //   });
 };
