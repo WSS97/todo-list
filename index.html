@@ -10,26 +10,28 @@
     <header>
       <h1>Mantenha suas tarefas em ordem!</h1>
     </header>
-    <section>
-      <input
-        type="text"
-        placeholder="Adcione nome, descricao ou titulo da tarefa"
-        id="inputTask"
-      />
-      <button id="add">Adcionar</button>
-    </section>
-    <main>
-      <div class="task">
+    <div class="container">
+      <section>
         <input
           type="text"
-          value="Adcione a sua primeira tarefa acima"
-          disabled
+          placeholder="Adcione nome, descricao ou titulo da tarefa"
+          id="inputTask"
         />
-        <button>Editar</button>
-        <button onclick="remove()">Excluir</button>
-        <button onclick="ok()">ok</button>
-      </div>
-    </main>
+        <button id="add">Adcionar</button>
+      </section>
+      <main>
+        <div class="demoTask">
+          <input
+            type="text"
+            value="Adcione a sua primeira tarefa acima"
+            disabled
+          />
+          <button disabled>Editar</button>
+          <button disabled>Excluir</button>
+          <button disabled>ok</button>
+        </div>
+      </main>
+    </div>
 
     <script src="javascript/script.js"></script>
   </body>

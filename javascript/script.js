@@ -49,6 +49,7 @@ window.onload = () => {
 
         buttonSave.classList.add("noView");
       };
+      // funcao de remocao da tarefa da lista
 
       inputTask.value = inTask.value;
       inputTask.setAttribute("disabled", true);
