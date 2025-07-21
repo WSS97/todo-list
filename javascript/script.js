@@ -4,7 +4,26 @@ window.onload = () => {
   const tasks = document.querySelectorAll(".task");
   const editButtons = document.querySelectorAll(".edit");
   // adcao de evento de click para chamar a funcao de adcionar elemento a lista
-  document.getElementById("add").addEventListener("click", adc);
+  const addButton = document.getElementById("add");
+  addButton.addEventListener("click", adc);
+
+  inTask.addEventListener("focus", () => {
+    inTask.style.backgroundColor = "#f2ecb6";
+    inTask.style.borderRadius = "5px";
+    inTask.style.borderBottom = "1px solid black";
+    addButton.style.backgroundColor = "#78ca78ff";
+    addButton.style.height = "2.6em";
+    addButton.style.borderRadius = "5px";
+  });
+
+  inTask.addEventListener("blur", () => {
+    inTask.style.backgroundColor = "";
+    inTask.style.borderRadius = "";
+    inTask.style.borderBottom = "";
+    addButton.style.backgroundColor = "";
+    addButton.style.height = "";
+    addButton.style.borderRadius = "";
+  });
 
   // funcao adcionar tarefa a lista
   function adc() {
@@ -49,6 +68,10 @@ window.onload = () => {
 
         buttonSave.classList.add("noView");
       };
+
+      buttonRemove.onclick = () => {
+        divTask.remove();
+      };
       // funcao de remocao da tarefa da lista
 
       inputTask.value = inTask.value;
@@ -83,6 +106,8 @@ window.onload = () => {
       divTask.appendChild(buttonSave);
 
       main.appendChild(divTask);
+
+      inTask.value = "";
     }
   }
 };
